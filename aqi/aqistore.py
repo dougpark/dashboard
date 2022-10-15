@@ -14,7 +14,7 @@ import requests
 # copy config/.token_example to config/.token
 # put your token codes between the single quotes
 # ensure .token is in your .gitignore so it is not checked into version control
-exec(open('aqi/aqi_config/token').read())
+exec(open('aqi/aqi_config/.token').read())
 
 # api_base_url = 'https://www.purpleair.com/json?show='
 # api_url = 'https://www.purpleair.com/json?show=104402'
