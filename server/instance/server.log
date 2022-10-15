@@ -1,0 +1,600 @@
+2022-10-14 21:04:03,154 Started
+2022-10-14 21:04:03,154 running server.py
+2022-10-14 21:04:03,183  * Debugger is active!
+2022-10-14 21:04:03,184  * Debugger PIN: 338-798-802
+2022-10-14 21:04:23,957 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 21:04:24,485 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 21:04:24,665 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-14 21:04:24,857 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 21:04:24,863 192.168.1.221 - - [14/Oct/2022 21:04:24] "GET /power HTTP/1.1" 200 -
+2022-10-14 21:09:22,784  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:09:23,760 Started
+2022-10-14 21:09:23,760 running server.py
+2022-10-14 21:09:23,789  * Debugger is active!
+2022-10-14 21:09:23,790  * Debugger PIN: 338-798-802
+2022-10-14 21:09:30,903  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:09:31,841 Started
+2022-10-14 21:09:31,841 running server.py
+2022-10-14 21:09:31,870  * Debugger is active!
+2022-10-14 21:09:31,871  * Debugger PIN: 338-798-802
+2022-10-14 21:09:37,970  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:09:38,882 Started
+2022-10-14 21:09:38,883 running server.py
+2022-10-14 21:09:38,912  * Debugger is active!
+2022-10-14 21:09:38,913  * Debugger PIN: 338-798-802
+2022-10-14 21:17:33,291 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 21:17:33,707 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 21:17:33,869 192.168.1.221 - - [14/Oct/2022 21:17:33] "GET / HTTP/1.1" 200 -
+2022-10-14 21:17:33,906 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-14 21:17:34,162 192.168.1.221 - - [14/Oct/2022 21:17:34] "GET /aqi HTTP/1.1" 200 -
+2022-10-14 21:17:34,261 192.168.1.221 - - [14/Oct/2022 21:17:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2022-10-14 21:17:34,262 192.168.1.221 - - [14/Oct/2022 21:17:34] "[36mGET /static/favicon.png HTTP/1.1[0m" 304 -
+2022-10-14 21:17:34,290 **************** starting aqi 
+2022-10-14 21:17:34,292 **************** starting sensor 
+2022-10-14 21:17:34,294 get_sensor_proc - sensor_id from db.
+2022-10-14 21:17:34,295 192.168.1.221 - - [14/Oct/2022 21:17:34] "POST /api/sensor HTTP/1.1" 200 -
+2022-10-14 21:17:34,296 retrieved sensor_id from database: 104402
+2022-10-14 21:17:34,299 Resetting dropped connection: api.purpleair.com
+2022-10-14 21:17:34,420 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 21:17:34,423 192.168.1.221 - - [14/Oct/2022 21:17:34] "GET /power HTTP/1.1" 200 -
+2022-10-14 21:17:34,482 https://api.purpleair.com:443 "GET /v1/sensors/104402?sensor_index=104402 HTTP/1.1" 200 3441
+2022-10-14 21:17:34,484 aqistore - New data received from PurpleAir api.
+2022-10-14 21:17:34,484 Processed data from PurpleAir api: 
+2022-10-14 21:17:34,484 {'aqi': '53', 'label': 'Forest Park', 'aqiColor': '#FFFF00', 'temp': 84, 'humidity': 31, 'pressure': 989.79, 'api_error': None}
+2022-10-14 21:17:34,484 aqi_proc - data from purpleAir.
+2022-10-14 21:17:34,485 192.168.1.221 - - [14/Oct/2022 21:17:34] "POST /api/aqi HTTP/1.1" 200 -
+2022-10-14 21:17:38,918 **************** starting aqi 
+2022-10-14 21:17:38,920 retrieved sensor_id from database: 104402
+2022-10-14 21:17:38,920 aqistore - New data received from PurpleAir api.
+2022-10-14 21:17:38,921 Processed data from PurpleAir api: 
+2022-10-14 21:17:38,921 {'aqi': '53', 'label': 'Forest Park', 'aqiColor': '#FFFF00', 'temp': 84, 'humidity': 31, 'pressure': 989.79, 'api_error': None}
+2022-10-14 21:17:38,922 aqi_proc - data from purpleAir.
+2022-10-14 21:17:38,923 192.168.1.221 - - [14/Oct/2022 21:17:38] "POST /api/aqi HTTP/1.1" 200 -
+2022-10-14 21:17:38,992 **************** starting sensor 
+2022-10-14 21:17:38,994 get_sensor_proc - sensor_id from db.
+2022-10-14 21:17:38,996 192.168.1.221 - - [14/Oct/2022 21:17:38] "POST /api/sensor HTTP/1.1" 200 -
+2022-10-14 21:17:48,316 **************** starting aqi 
+2022-10-14 21:17:48,317 **************** starting sensor 
+2022-10-14 21:17:48,319 retrieved sensor_id from database: 104402
+2022-10-14 21:17:48,319 aqistore - New data received from PurpleAir api.
+2022-10-14 21:17:48,319 get_sensor_proc - sensor_id from db.
+2022-10-14 21:17:48,320 Processed data from PurpleAir api: 
+2022-10-14 21:17:48,321 192.168.1.221 - - [14/Oct/2022 21:17:48] "POST /api/sensor HTTP/1.1" 200 -
+2022-10-14 21:17:48,321 {'aqi': '53', 'label': 'Forest Park', 'aqiColor': '#FFFF00', 'temp': 84, 'humidity': 31, 'pressure': 989.79, 'api_error': None}
+2022-10-14 21:17:48,322 aqi_proc - data from purpleAir.
+2022-10-14 21:17:48,323 192.168.1.221 - - [14/Oct/2022 21:17:48] "POST /api/aqi HTTP/1.1" 200 -
+2022-10-14 21:17:52,693 192.168.1.221 - - [14/Oct/2022 21:17:52] "GET /aqi HTTP/1.1" 200 -
+2022-10-14 21:17:52,706 192.168.1.221 - - [14/Oct/2022 21:17:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2022-10-14 21:17:52,775 192.168.1.221 - - [14/Oct/2022 21:17:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2022-10-14 21:17:52,791 **************** starting aqi 
+2022-10-14 21:17:52,794 retrieved sensor_id from database: 104402
+2022-10-14 21:17:52,794 aqistore - New data received from PurpleAir api.
+2022-10-14 21:17:52,795 Processed data from PurpleAir api: 
+2022-10-14 21:17:52,795 {'aqi': '53', 'label': 'Forest Park', 'aqiColor': '#FFFF00', 'temp': 84, 'humidity': 31, 'pressure': 989.79, 'api_error': None}
+2022-10-14 21:17:52,795 aqi_proc - data from purpleAir.
+2022-10-14 21:17:52,797 192.168.1.221 - - [14/Oct/2022 21:17:52] "POST /api/aqi HTTP/1.1" 200 -
+2022-10-14 21:17:52,860 **************** starting sensor 
+2022-10-14 21:17:52,863 get_sensor_proc - sensor_id from db.
+2022-10-14 21:17:52,865 192.168.1.221 - - [14/Oct/2022 21:17:52] "POST /api/sensor HTTP/1.1" 200 -
+2022-10-14 21:17:53,106 192.168.1.221 - - [14/Oct/2022 21:17:53] "GET / HTTP/1.1" 200 -
+2022-10-14 21:17:53,822 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 21:17:54,251 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 21:17:54,494 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-14 21:17:54,713 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 21:17:54,718 192.168.1.221 - - [14/Oct/2022 21:17:54] "GET /power HTTP/1.1" 200 -
+2022-10-14 21:21:05,825  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:21:06,791 Started
+2022-10-14 21:21:06,791 running server.py
+2022-10-14 21:21:06,820  * Debugger is active!
+2022-10-14 21:21:06,821  * Debugger PIN: 338-798-802
+2022-10-14 21:21:23,056  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:21:23,981 Started
+2022-10-14 21:21:23,981 running server.py
+2022-10-14 21:21:24,011  * Debugger is active!
+2022-10-14 21:21:24,012  * Debugger PIN: 338-798-802
+2022-10-14 21:21:47,388  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:21:48,275 Started
+2022-10-14 21:21:48,276 running server.py
+2022-10-14 21:21:48,305  * Debugger is active!
+2022-10-14 21:21:48,306  * Debugger PIN: 338-798-802
+2022-10-14 21:22:14,719  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 21:22:15,659 Started
+2022-10-14 21:22:15,659 running server.py
+2022-10-14 21:22:15,690  * Debugger is active!
+2022-10-14 21:22:15,691  * Debugger PIN: 338-798-802
+2022-10-14 21:22:25,651 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 21:22:26,130 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 21:22:26,369 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-14 21:22:26,574 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 21:22:26,581 192.168.1.221 - - [14/Oct/2022 21:22:26] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:00:00,641 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:00:01,119 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:00:01,298 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-14 22:00:01,494 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:00:01,496 192.168.1.214 - - [14/Oct/2022 22:00:01] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:00:01,938 192.168.1.214 - - [14/Oct/2022 22:00:01] "GET /favicon.ico HTTP/1.1" 200 -
+2022-10-14 22:20:40,777 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:20:41,243 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:20:41,447 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:20:41,631 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:20:41,636 192.168.1.221 - - [14/Oct/2022 22:20:41] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:25:30,621 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:25:31,038 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:25:31,231 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:25:31,410 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:25:31,412 192.168.1.221 - - [14/Oct/2022 22:25:31] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:26:44,285  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:26:45,272 Started
+2022-10-14 22:26:45,272 running server.py
+2022-10-14 22:26:45,301  * Debugger is active!
+2022-10-14 22:26:45,302  * Debugger PIN: 338-798-802
+2022-10-14 22:28:53,103  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:28:54,006 Started
+2022-10-14 22:28:54,006 running server.py
+2022-10-14 22:28:54,035  * Debugger is active!
+2022-10-14 22:28:54,036  * Debugger PIN: 338-798-802
+2022-10-14 22:28:56,074  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:28:56,962 Started
+2022-10-14 22:28:56,963 running server.py
+2022-10-14 22:28:56,992  * Debugger is active!
+2022-10-14 22:28:56,993  * Debugger PIN: 338-798-802
+2022-10-14 22:28:57,443 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:28:57,844 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:28:58,039 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 220
+2022-10-14 22:28:58,240 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:28:58,245 192.168.1.221 - - [14/Oct/2022 22:28:58] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:29:28,475  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:29:29,400 Started
+2022-10-14 22:29:29,400 running server.py
+2022-10-14 22:29:29,429  * Debugger is active!
+2022-10-14 22:29:29,430  * Debugger PIN: 338-798-802
+2022-10-14 22:29:34,506  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:29:35,432 Started
+2022-10-14 22:29:35,433 running server.py
+2022-10-14 22:29:35,462  * Debugger is active!
+2022-10-14 22:29:35,463  * Debugger PIN: 338-798-802
+2022-10-14 22:29:36,928 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:29:37,302 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:29:37,512 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:29:37,717 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:29:37,720 192.168.1.221 - - [14/Oct/2022 22:29:37] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:32:06,495  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:32:07,459 Started
+2022-10-14 22:32:07,459 running server.py
+2022-10-14 22:32:07,488  * Debugger is active!
+2022-10-14 22:32:07,489  * Debugger PIN: 338-798-802
+2022-10-14 22:32:08,808 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:32:09,178 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:32:09,388 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:32:09,627 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:32:09,630 192.168.1.221 - - [14/Oct/2022 22:32:09] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:34:19,187  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:34:20,083 Started
+2022-10-14 22:34:20,083 running server.py
+2022-10-14 22:34:20,115  * Debugger is active!
+2022-10-14 22:34:20,116  * Debugger PIN: 338-798-802
+2022-10-14 22:34:23,920 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:34:24,391 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:34:24,581 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:34:24,802 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:34:24,805 192.168.1.221 - - [14/Oct/2022 22:34:24] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:34:34,292  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:34:35,193 Started
+2022-10-14 22:34:35,193 running server.py
+2022-10-14 22:34:35,222  * Debugger is active!
+2022-10-14 22:34:35,223  * Debugger PIN: 338-798-802
+2022-10-14 22:34:40,601 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:34:40,946 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:34:41,136 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 221
+2022-10-14 22:34:41,336 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:34:41,339 192.168.1.221 - - [14/Oct/2022 22:34:41] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:35:46,137  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:35:47,075 Started
+2022-10-14 22:35:47,075 running server.py
+2022-10-14 22:35:47,104  * Debugger is active!
+2022-10-14 22:35:47,106  * Debugger PIN: 338-798-802
+2022-10-14 22:39:27,367  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:39:28,266 Started
+2022-10-14 22:39:28,267 running server.py
+2022-10-14 22:39:28,296  * Debugger is active!
+2022-10-14 22:39:28,297  * Debugger PIN: 338-798-802
+2022-10-14 22:40:11,947  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:40:12,949 Started
+2022-10-14 22:40:12,950 running server.py
+2022-10-14 22:40:12,979  * Debugger is active!
+2022-10-14 22:40:12,980  * Debugger PIN: 338-798-802
+2022-10-14 22:40:16,659 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:40:17,043 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:40:17,264 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:40:17,468 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:40:17,473 192.168.1.221 - - [14/Oct/2022 22:40:17] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:47:01,984 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:47:02,411 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:47:02,598 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:47:02,833 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:47:02,836 192.168.1.221 - - [14/Oct/2022 22:47:02] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:53:05,555  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:53:06,491 Started
+2022-10-14 22:53:06,491 running server.py
+2022-10-14 22:53:06,520  * Debugger is active!
+2022-10-14 22:53:06,521  * Debugger PIN: 338-798-802
+2022-10-14 22:53:11,234 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:53:11,649 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:53:11,849 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:53:12,041 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:53:12,048 192.168.1.221 - - [14/Oct/2022 22:53:12] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:53:53,228  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:54:54,024 Started
+2022-10-14 22:54:54,025 running server.py
+2022-10-14 22:54:54,055 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2022-10-14 22:54:54,056 [33mPress CTRL+C to quit[0m
+2022-10-14 22:54:54,058  * Restarting with stat
+2022-10-14 22:54:54,839 Started
+2022-10-14 22:54:54,839 running server.py
+2022-10-14 22:54:54,871  * Debugger is active!
+2022-10-14 22:54:54,872  * Debugger PIN: 338-798-802
+2022-10-14 22:54:58,993 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:54:59,416 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:54:59,619 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:54:59,820 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:54:59,825 192.168.1.221 - - [14/Oct/2022 22:54:59] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:55:36,484  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:55:36,645  * Restarting with stat
+2022-10-14 22:55:37,411 Started
+2022-10-14 22:55:37,412 running server.py
+2022-10-14 22:55:37,441  * Debugger is active!
+2022-10-14 22:55:37,442  * Debugger PIN: 338-798-802
+2022-10-14 22:55:42,730 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:55:43,204 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:55:43,436 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:55:43,655 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:55:43,658 192.168.1.221 - - [14/Oct/2022 22:55:43] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:56:26,173  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:56:26,331  * Restarting with stat
+2022-10-14 22:56:27,086 Started
+2022-10-14 22:56:27,086 running server.py
+2022-10-14 22:56:27,115  * Debugger is active!
+2022-10-14 22:56:27,115  * Debugger PIN: 338-798-802
+2022-10-14 22:56:40,473 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:56:40,956 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:56:41,224 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:56:41,428 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:56:41,433 192.168.1.221 - - [14/Oct/2022 22:56:41] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:57:34,080 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 22:57:34,568 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 22:57:34,739 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 22:57:34,915 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 22:57:34,917 192.168.1.221 - - [14/Oct/2022 22:57:34] "GET /power HTTP/1.1" 200 -
+2022-10-14 22:59:47,394  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 22:59:47,524  * Restarting with stat
+2022-10-14 22:59:48,287 Started
+2022-10-14 22:59:48,287 running server.py
+2022-10-14 22:59:48,316  * Debugger is active!
+2022-10-14 22:59:48,317  * Debugger PIN: 338-798-802
+2022-10-14 23:00:46,278  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 23:00:46,406  * Restarting with stat
+2022-10-14 23:00:47,193 Started
+2022-10-14 23:00:47,194 running server.py
+2022-10-14 23:00:47,223  * Debugger is active!
+2022-10-14 23:00:47,224  * Debugger PIN: 338-798-802
+2022-10-14 23:01:09,601  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 23:01:09,761  * Restarting with stat
+2022-10-14 23:01:10,550 Started
+2022-10-14 23:01:10,551 running server.py
+2022-10-14 23:01:10,580  * Debugger is active!
+2022-10-14 23:01:10,581  * Debugger PIN: 338-798-802
+2022-10-14 23:01:24,787  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 23:01:24,946  * Restarting with stat
+2022-10-14 23:01:25,723 Started
+2022-10-14 23:01:25,723 running server.py
+2022-10-14 23:01:25,759  * Debugger is active!
+2022-10-14 23:01:25,760  * Debugger PIN: 338-798-802
+2022-10-14 23:01:27,299 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 23:01:27,708 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 23:01:28,150 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 23:01:28,348 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 23:01:28,351 192.168.1.221 - - [14/Oct/2022 23:01:28] "GET /power HTTP/1.1" 200 -
+2022-10-14 23:02:44,995  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-14 23:02:45,143  * Restarting with stat
+2022-10-14 23:02:45,921 Started
+2022-10-14 23:02:45,921 running server.py
+2022-10-14 23:02:45,951  * Debugger is active!
+2022-10-14 23:02:45,952  * Debugger PIN: 338-798-802
+2022-10-14 23:02:47,561 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 23:02:47,969 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 23:02:48,196 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 220
+2022-10-14 23:02:48,377 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 215
+2022-10-14 23:02:48,381 192.168.1.221 - - [14/Oct/2022 23:02:48] "GET /power HTTP/1.1" 200 -
+2022-10-14 23:10:33,525 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-14 23:10:33,922 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-14 23:10:34,123 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-14 23:10:34,337 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 212
+2022-10-14 23:10:34,339 192.168.1.221 - - [14/Oct/2022 23:10:34] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:00:33,183 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:00:33,577 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:00:33,809 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-15 00:00:33,998 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:00:34,000 192.168.1.221 - - [15/Oct/2022 00:00:34] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:00:49,919 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:00:50,251 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:00:50,446 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-15 00:00:50,636 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:00:50,638 192.168.1.221 - - [15/Oct/2022 00:00:50] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:01:35,093 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:01:35,461 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:01:35,643 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 00:01:35,816 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:01:35,819 192.168.1.221 - - [15/Oct/2022 00:01:35] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:28:36,806 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:28:37,226 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:28:37,637 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 00:28:37,822 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:28:37,827 192.168.1.221 - - [15/Oct/2022 00:28:37] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:28:57,303 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:28:57,677 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:28:57,846 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 00:28:58,026 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:28:58,031 192.168.1.221 - - [15/Oct/2022 00:28:58] "GET /power HTTP/1.1" 200 -
+2022-10-15 00:45:11,544 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 00:45:12,017 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 00:45:12,253 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 00:45:12,415 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 00:45:12,419 192.168.1.221 - - [15/Oct/2022 00:45:12] "GET /power HTTP/1.1" 200 -
+2022-10-15 08:16:23,917 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:16:24,361 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:16:24,534 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 08:16:24,752 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:16:24,757 192.168.1.221 - - [15/Oct/2022 08:16:24] "GET /power HTTP/1.1" 200 -
+2022-10-15 08:31:09,433  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:31:09,593  * Restarting with stat
+2022-10-15 08:31:10,436 Started
+2022-10-15 08:31:10,436 running server.py
+2022-10-15 08:31:10,466  * Debugger is active!
+2022-10-15 08:31:10,467  * Debugger PIN: 338-798-802
+2022-10-15 08:31:15,232 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:31:15,695 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:31:15,867 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 08:31:16,067 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:31:16,070 192.168.1.221 - - [15/Oct/2022 08:31:16] "GET /power HTTP/1.1" 200 -
+2022-10-15 08:45:12,111 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:45:12,625 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:45:12,826 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 08:45:13,054 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:45:13,062 192.168.1.221 - - [15/Oct/2022 08:45:13] "GET /power HTTP/1.1" 200 -
+2022-10-15 08:46:01,493  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:46:01,625  * Restarting with stat
+2022-10-15 08:46:02,470 Started
+2022-10-15 08:46:02,470 running server.py
+2022-10-15 08:46:02,506  * Debugger is active!
+2022-10-15 08:46:02,509  * Debugger PIN: 338-798-802
+2022-10-15 08:48:11,600  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:48:11,767  * Restarting with stat
+2022-10-15 08:48:12,566 Started
+2022-10-15 08:48:12,567 running server.py
+2022-10-15 08:48:12,596  * Debugger is active!
+2022-10-15 08:48:12,597  * Debugger PIN: 338-798-802
+2022-10-15 08:48:45,157  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:48:45,323  * Restarting with stat
+2022-10-15 08:48:46,137 Started
+2022-10-15 08:48:46,137 running server.py
+2022-10-15 08:48:46,174  * Debugger is active!
+2022-10-15 08:48:46,175  * Debugger PIN: 338-798-802
+2022-10-15 08:48:55,331  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:48:55,473  * Restarting with stat
+2022-10-15 08:48:56,246 Started
+2022-10-15 08:48:56,246 running server.py
+2022-10-15 08:48:56,275  * Debugger is active!
+2022-10-15 08:48:56,276  * Debugger PIN: 338-798-802
+2022-10-15 08:48:57,199 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:48:57,658 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:48:57,868 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 08:48:58,107 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:48:58,136 192.168.1.221 - - [15/Oct/2022 08:48:58] "[35m[1mGET /power HTTP/1.1[0m" 500 -
+2022-10-15 08:48:58,266 192.168.1.221 - - [15/Oct/2022 08:48:58] "GET /power?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-10-15 08:48:58,267 192.168.1.221 - - [15/Oct/2022 08:48:58] "GET /power?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-10-15 08:48:58,347 192.168.1.221 - - [15/Oct/2022 08:48:58] "GET /power?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-15 08:48:58,456 192.168.1.221 - - [15/Oct/2022 08:48:58] "[36mGET /power?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-15 08:49:46,028  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:49:46,199  * Restarting with stat
+2022-10-15 08:49:46,985 Started
+2022-10-15 08:49:46,986 running server.py
+2022-10-15 08:49:47,026  * Debugger is active!
+2022-10-15 08:49:47,028  * Debugger PIN: 338-798-802
+2022-10-15 08:49:49,976 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:49:50,344 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:49:50,539 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 08:49:50,739 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:49:50,742 192.168.1.221 - - [15/Oct/2022 08:49:50] "GET /power HTTP/1.1" 200 -
+2022-10-15 08:52:17,526  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 08:52:17,703  * Restarting with stat
+2022-10-15 08:52:18,508 Started
+2022-10-15 08:52:18,508 running server.py
+2022-10-15 08:52:18,536  * Debugger is active!
+2022-10-15 08:52:18,537  * Debugger PIN: 338-798-802
+2022-10-15 08:52:19,574 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 08:52:19,982 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 08:52:20,202 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 221
+2022-10-15 08:52:20,424 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 08:52:20,428 192.168.1.221 - - [15/Oct/2022 08:52:20] "GET /power HTTP/1.1" 200 -
+2022-10-15 10:41:05,696 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 10:41:06,125 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 10:41:06,353 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-15 10:41:06,708 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 10:41:06,713 192.168.1.221 - - [15/Oct/2022 10:41:06] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:06:28,513  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:06:28,676  * Restarting with stat
+2022-10-15 11:06:29,473 Started
+2022-10-15 11:06:29,473 running server.py
+2022-10-15 11:06:29,502  * Debugger is active!
+2022-10-15 11:06:29,503  * Debugger PIN: 338-798-802
+2022-10-15 11:11:33,522 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:11:33,951 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:11:34,138 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:11:34,367 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:11:34,371 192.168.1.221 - - [15/Oct/2022 11:11:34] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:15:10,234  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:15:10,365  * Restarting with stat
+2022-10-15 11:15:11,142 Started
+2022-10-15 11:15:11,142 running server.py
+2022-10-15 11:15:11,171  * Debugger is active!
+2022-10-15 11:15:11,172  * Debugger PIN: 338-798-802
+2022-10-15 11:15:15,239  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:15:15,393  * Restarting with stat
+2022-10-15 11:15:16,181 Started
+2022-10-15 11:15:16,182 running server.py
+2022-10-15 11:15:16,216  * Debugger is active!
+2022-10-15 11:15:16,217  * Debugger PIN: 338-798-802
+2022-10-15 11:15:32,507  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:15:32,642  * Restarting with stat
+2022-10-15 11:15:33,424 Started
+2022-10-15 11:15:33,424 running server.py
+2022-10-15 11:15:33,453  * Debugger is active!
+2022-10-15 11:15:33,454  * Debugger PIN: 338-798-802
+2022-10-15 11:15:56,864  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:15:57,024  * Restarting with stat
+2022-10-15 11:15:57,838 Started
+2022-10-15 11:15:57,838 running server.py
+2022-10-15 11:15:57,871  * Debugger is active!
+2022-10-15 11:15:57,871  * Debugger PIN: 338-798-802
+2022-10-15 11:16:01,868 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:16:02,305 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:16:02,539 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:16:02,737 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:16:02,744 192.168.1.221 - - [15/Oct/2022 11:16:02] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:16:26,306  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:16:26,469  * Restarting with stat
+2022-10-15 11:16:27,267 Started
+2022-10-15 11:16:27,267 running server.py
+2022-10-15 11:16:27,296  * Debugger is active!
+2022-10-15 11:16:27,297  * Debugger PIN: 338-798-802
+2022-10-15 11:16:29,656 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:16:30,022 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:16:30,198 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-15 11:16:30,570 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:16:30,573 192.168.1.221 - - [15/Oct/2022 11:16:30] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:16:58,743  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:16:58,893  * Restarting with stat
+2022-10-15 11:19:17,790 Started
+2022-10-15 11:19:17,791 running server.py
+2022-10-15 11:19:17,823 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2022-10-15 11:19:17,823 [33mPress CTRL+C to quit[0m
+2022-10-15 11:19:17,825  * Restarting with stat
+2022-10-15 11:19:18,613 Started
+2022-10-15 11:19:18,614 running server.py
+2022-10-15 11:19:18,642  * Debugger is active!
+2022-10-15 11:19:18,643  * Debugger PIN: 338-798-802
+2022-10-15 11:19:23,302 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:19:23,687 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:19:23,880 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:19:23,898 192.168.1.221 - - [15/Oct/2022 11:19:23] "[35m[1mGET /power HTTP/1.1[0m" 500 -
+2022-10-15 11:19:24,034 192.168.1.221 - - [15/Oct/2022 11:19:24] "[36mGET /power?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-10-15 11:19:24,036 192.168.1.221 - - [15/Oct/2022 11:19:24] "[36mGET /power?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-10-15 11:19:24,112 192.168.1.221 - - [15/Oct/2022 11:19:24] "GET /power?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-15 11:19:49,007  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:19:49,139  * Restarting with stat
+2022-10-15 11:19:49,912 Started
+2022-10-15 11:19:49,913 running server.py
+2022-10-15 11:19:49,946  * Debugger is active!
+2022-10-15 11:19:49,947  * Debugger PIN: 338-798-802
+2022-10-15 11:19:52,728 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:19:53,166 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:19:53,372 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:19:53,620 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:19:53,627 192.168.1.221 - - [15/Oct/2022 11:19:53] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:20:28,591  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:20:28,763  * Restarting with stat
+2022-10-15 11:20:29,574 Started
+2022-10-15 11:20:29,575 running server.py
+2022-10-15 11:20:29,604  * Debugger is active!
+2022-10-15 11:20:29,605  * Debugger PIN: 338-798-802
+2022-10-15 11:23:41,409  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:23:41,536  * Restarting with stat
+2022-10-15 11:23:42,322 Started
+2022-10-15 11:23:42,323 running server.py
+2022-10-15 11:23:42,352  * Debugger is active!
+2022-10-15 11:23:42,353  * Debugger PIN: 338-798-802
+2022-10-15 11:23:48,439  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:23:48,600  * Restarting with stat
+2022-10-15 11:23:49,359 Started
+2022-10-15 11:23:49,360 running server.py
+2022-10-15 11:23:49,389  * Debugger is active!
+2022-10-15 11:23:49,391  * Debugger PIN: 338-798-802
+2022-10-15 11:23:53,835 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:23:54,293 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:23:54,484 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 222
+2022-10-15 11:23:54,691 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:23:54,698 192.168.1.221 - - [15/Oct/2022 11:23:54] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:24:33,041  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:24:33,171  * Restarting with stat
+2022-10-15 11:24:33,926 Started
+2022-10-15 11:24:33,926 running server.py
+2022-10-15 11:24:33,955  * Debugger is active!
+2022-10-15 11:24:33,956  * Debugger PIN: 338-798-802
+2022-10-15 11:24:36,809 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:24:37,239 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:24:37,431 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:24:37,621 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:24:37,627 192.168.1.221 - - [15/Oct/2022 11:24:37] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:28:33,548  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:28:33,679  * Restarting with stat
+2022-10-15 11:28:34,462 Started
+2022-10-15 11:28:34,462 running server.py
+2022-10-15 11:28:34,491  * Debugger is active!
+2022-10-15 11:28:34,492  * Debugger PIN: 338-798-802
+2022-10-15 11:28:35,660 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:28:36,030 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:28:36,240 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 221
+2022-10-15 11:28:36,429 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:28:36,442 192.168.1.221 - - [15/Oct/2022 11:28:36] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:30:37,318  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:30:37,479  * Restarting with stat
+2022-10-15 11:30:38,244 Started
+2022-10-15 11:30:38,244 running server.py
+2022-10-15 11:30:38,274  * Debugger is active!
+2022-10-15 11:30:38,275  * Debugger PIN: 338-798-802
+2022-10-15 11:30:39,787 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:30:40,307 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:30:40,718 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:30:40,927 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:30:40,934 192.168.1.221 - - [15/Oct/2022 11:30:40] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:34:20,610  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:34:20,761  * Restarting with stat
+2022-10-15 11:34:21,531 Started
+2022-10-15 11:34:21,532 running server.py
+2022-10-15 11:34:21,561  * Debugger is active!
+2022-10-15 11:34:21,562  * Debugger PIN: 338-798-802
+2022-10-15 11:34:25,595 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:34:26,019 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:34:26,223 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:34:26,243 192.168.1.221 - - [15/Oct/2022 11:34:26] "[35m[1mGET /power HTTP/1.1[0m" 500 -
+2022-10-15 11:34:26,381 192.168.1.221 - - [15/Oct/2022 11:34:26] "[36mGET /power?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-10-15 11:34:26,382 192.168.1.221 - - [15/Oct/2022 11:34:26] "[36mGET /power?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-10-15 11:34:26,469 192.168.1.221 - - [15/Oct/2022 11:34:26] "[36mGET /power?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-15 11:35:16,363  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:35:16,522  * Restarting with stat
+2022-10-15 11:35:17,298 Started
+2022-10-15 11:35:17,298 running server.py
+2022-10-15 11:35:17,328  * Debugger is active!
+2022-10-15 11:35:17,329  * Debugger PIN: 338-798-802
+2022-10-15 11:35:18,093 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:35:18,535 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:35:18,729 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 221
+2022-10-15 11:35:18,895 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:35:18,901 192.168.1.221 - - [15/Oct/2022 11:35:18] "GET /power HTTP/1.1" 200 -
+2022-10-15 11:38:18,179  * Detected change in '/home/pi/switchbot/server/switchbot_api.py', reloading
+2022-10-15 11:38:18,307  * Restarting with stat
+2022-10-15 11:38:19,082 Started
+2022-10-15 11:38:19,083 running server.py
+2022-10-15 11:38:19,132  * Debugger is active!
+2022-10-15 11:38:19,133  * Debugger PIN: 338-798-802
+2022-10-15 11:38:22,022 Starting new HTTPS connection (1): api.switch-bot.com:443
+2022-10-15 11:38:22,814 https://api.switch-bot.com:443 "GET /v1.1/devices HTTP/1.1" 200 353
+2022-10-15 11:38:23,000 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92C885A/status HTTP/1.1" 200 223
+2022-10-15 11:38:23,269 https://api.switch-bot.com:443 "GET /v1.1/devices/6055F92F6E2E/status HTTP/1.1" 200 214
+2022-10-15 11:38:23,275 192.168.1.221 - - [15/Oct/2022 11:38:23] "GET /power HTTP/1.1" 200 -
