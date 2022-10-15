@@ -1,8 +1,13 @@
-from typing import List
-from switchbot.devices import Device
-from switchbot.remotes import Remote
+# https://github.com/jonghwanhyeon/python-switchbot
+# pip3 install python-switchbot
+# October 14, 2022
 
-from switchbot.client import SwitchBotClient
+
+from typing import List
+from .devices import Device
+from .remotes import Remote
+
+from .client import SwitchBotClient
 
 
 class SwitchBot:

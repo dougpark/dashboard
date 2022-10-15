@@ -1,10 +1,18 @@
+# https://github.com/jonghwanhyeon/python-switchbot
+# pip3 install python-switchbot
+# October 14, 2022
+
+# Modified Oct 14, 2022
+# Added additional status_key_mappings
+# weight, electricity_of_day, electric_current, voltage
+
 from __future__ import annotations
 
 from typing import Any, ClassVar, Dict, List, Optional
 
 import humps
 
-from switchbot.client import SwitchBotClient
+from .client import SwitchBotClient
 
 status_key_mapping = {
     'power': 'power',

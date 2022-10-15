@@ -5,7 +5,7 @@ from typing import ClassVar, Dict, Optional
 
 import humps
 
-from switchbot.client import SwitchBotClient
+from .client import SwitchBotClient
 
 
 class Remote:

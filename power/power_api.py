@@ -6,13 +6,15 @@ import uuid
 
 # add local directory to path
 # https://fortierq.github.io/python-import/
-from pathlib import Path
-import sys
-path_root = Path(__file__).parents[2]
-sys.path.append(str(path_root))
-#print(sys.path)
+# from pathlib import Path
+# import sys
+# path_root = Path(__file__).parents[1]
+# sys.path.insert(0,str(path_root))
+# print(str(sys.path))
+# sys.path.append(str(path_root))
 
-from switchbot import SwitchBot
+#from power import switchbot
+from .switchbot_api import SwitchBot
 from dotmap import DotMap
 
 # load token and secret from external file
@@ -21,7 +23,7 @@ from dotmap import DotMap
 # copy switchbot_config/.token_example to switchbot_config/.token
 # put your token and secret codes between the single quotes
 # ensure .token is in your .gitignore so it is not checked into version control
-exec(open('switchbot_config/.token').read())
+exec(open('power/switchbot_config/.token').read())
 
 def init_switchbot():
     switchbot = SwitchBot(token=your_switch_bot_token, secret=your_switch_bot_secret, nonce=str(uuid.uuid4()))

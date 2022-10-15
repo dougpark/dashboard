@@ -2,18 +2,24 @@
 #import time
 import json
 import logging
-import datastore
+from aqi import datastore
 from dotmap import DotMap
 from purpleair import PurpleAir
-
 
 # Import Requests Library
 import requests
 
+# load token from external file
+# https://stackoverflow.com/a/67948155
+# copy config/.token_example to config/.token
+# put your token codes between the single quotes
+# ensure .token is in your .gitignore so it is not checked into version control
+exec(open('aqi/aqi_config/token').read())
+
 # api_base_url = 'https://www.purpleair.com/json?show='
 # api_url = 'https://www.purpleair.com/json?show=104402'
 
-p = PurpleAir('A3FCC4CC-222F-11ED-B5AA-42010A800006')
+p = PurpleAir(purpleAir_token)
 
 # http://tech.thejoestory.com/2020/09/air-quality-calculation-purple-air-api.html
 

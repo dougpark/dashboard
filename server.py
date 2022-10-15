@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, jsonify, make_response
 import os
 import logging
-import datastore
-import aqistore
-import switchbot_api
+from aqi import datastore
+from aqi import aqistore
+from power import power_api
+# from power import switchbot_local
 
 # DotMap is a dot-access dictionary subclass
 # https://pypi.org/project/dotmap/
@@ -44,7 +45,7 @@ def index():
 
 @app.route('/power')
 def power():
-    result = switchbot_api.power()
+    result = power_api.power()
     return result
 
 @app.route('/pi')
