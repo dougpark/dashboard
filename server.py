@@ -11,6 +11,9 @@ from power import power_api
 # https://github.com/drgrib/dotmap
 from dotmap import DotMap
 
+import threading
+import time
+
 # logging configuration
 # debug, info, warning, error, critical
 logging.basicConfig(filename='./instance/server.log',
@@ -175,8 +178,51 @@ def init():
 
 @app.route('/<name>')
 def print_name(name):
+    print('hi ',name)
     return 'Hi, {}'.format(name)
 
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+exitFlag = 0
+
+class newThread (threading.Thread):
+   def __init__(self, threadID, threadName, counter, delay, calledFunc, funcParam=False):
+      threading.Thread.__init__(self)
+      self.threadID = threadID
+      self.name = threadName
+      self.counter = counter
+      self.delay = delay
+      self.calledFunc = calledFunc
+      self.funcParam = funcParam
+      
+   def run(self):
+      print("Starting " + self.name)
+      self.thread_runner(self.name, self.counter, self.delay, self.calledFunc, self.funcParam)
+      print("Exiting " + self.name)
+
+   def thread_runner(self, threadName, counter, delay, calledFunc, funcParam):
+      # negative counter will run forever
+      # delay between calls in seconds
+      while counter:
+        if exitFlag:
+            threadName.exit()
+        if funcParam:
+            calledFunc(funcParam) # call the defined function
+        else:
+            calledFunc()
+        print ("%s: %s, %s" % (threadName, counter, time.ctime(time.time())))
+        time.sleep(delay)
+        counter -= 1
+      
+def create_threads():
+    print("creating threads")
+    # Create new threads
+    power_thread = newThread(1, "Power-1", 5, 2, power)
+    name_thread = newThread(2, "Name-1", 5, 2, print_name, 'Jo')
+
+    # Start new Threads
+    power_thread.start()
+    name_thread.start()
+
+if __name__ == '__main__':  
+    create_threads()
+    app.run(debug=True,use_reloader=False, host='0.0.0.0', port=5000)

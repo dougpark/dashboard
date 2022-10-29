@@ -2,7 +2,9 @@
 # pip3 install python-switchbot
 # October 14, 2022
 
+import logging
 import uuid
+from datetime import datetime, timezone
 
 # add local directory to path
 # https://fortierq.github.io/python-import/
@@ -44,7 +46,18 @@ def get_raw(device, keys):
     return raw
 
 def get_status(device, keys):
+    
+    utc_timestamp = datetime.utcnow().timestamp()
+    utc_time = datetime.utcnow()
+    local_timestamp = datetime.now().timestamp()
+    local_time = datetime.now()
+    
     status = DotMap()
+    status.utc_time = utc_time
+    status.local_time = local_time
+    status.utc_timestamp = utc_timestamp
+    status.local_timestamp = local_timestamp
+    
     status.name = device.name
     status.type = device.type
     status.id = device.id
@@ -62,6 +75,8 @@ def get_status(device, keys):
     hours = f'{(keys["electricity_of_day"] // 60) :.0f}'  
     minutes = f'{(keys["electricity_of_day"] % 60) :.0f}' 
     status.on_hours_mins = f'{hours}:{minutes}'
+
+    logging.info(status)
     return status
 
 

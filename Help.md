@@ -2,7 +2,8 @@
 * Create:   python -m venv .venv
 * Activate: source .venv/bin/activate
 
-
+## Linux find a process by name
+* ps aux | grep -i server.py
 
 
 
