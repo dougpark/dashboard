@@ -4,7 +4,7 @@ function init() {
     var socket = io()
     var loggerElement = document.getElementById('logger')
     var dataElement = document.createElement('pre')
-    dataElement.innerHTML = "Started"
+    dataElement.innerHTML = "Server Started"
     loggerElement.appendChild(dataElement)
 
     console.log('sending first connect/one to server:')
@@ -42,6 +42,6 @@ function init() {
 
 }
 
-$( window ).on( "load", function() {
-  init()
+$(window).on("load", function () {
+    init()
 })

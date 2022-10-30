@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO, emit
 # https://flask-socketio.readthedocs.io/en/latest/intro.html
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'justasecretkeythatishouldputhere'
@@ -8,7 +9,7 @@ socketio = SocketIO(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',date=datetime.now())
 
 @app.route('/api')
 def api():
