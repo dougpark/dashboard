@@ -8,13 +8,13 @@ function init() {
     loggerElement.appendChild(dataElement)
 
     console.log('sending first connect/one to server:')
-    socket.emit('one', {data: 'I\'m connected/one'});
+    socket.emit('one', {data: 'connect/one'})
 
-    console.log('sending first connect/mirror to server:')
-    socket.emit('mirror', {data: 'Mirror data sent from client'});
+    console.log('sending mirror/one to server:')
+    socket.emit('mirror', {data: 'First mirror data sent from client'})
 
     console.log('sending mirror/two to server:')
-    socket.emit('mirror', {data: 'Second mirror data from client'});
+    socket.emit('mirror', {data: 'Second mirror data sent from client'})
 
     socket.on('mirrorResp', function (payload) {
         console.log('mirror response from server:')
@@ -42,6 +42,6 @@ function init() {
 
 }
 
-window.addEventListener('load', function (event) {
-    init()
-});
+$( window ).on( "load", function() {
+  init()
+})
