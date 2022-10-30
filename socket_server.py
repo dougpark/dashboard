@@ -6,6 +6,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'justasecretkeythatishouldputhere'
 socketio = SocketIO(app)
+refreshVal = 0
 
 @app.route('/')
 def index():
@@ -17,6 +18,14 @@ def api():
     query = dict(request.args)
     socketio.emit('log', dict(data=str(query)), broadcast=True)
     return jsonify(dict(success=True, message='Received'))
+
+@socketio.on('refresh')
+def refreshFunc(data):
+    global refreshVal
+    print('refresh called')
+    refreshVal = refreshVal + 1
+    payload = dict(data=refreshVal)
+    emit('refreshResp', payload, broadcast=True)
 
 @socketio.on('one')
 def one(data):
