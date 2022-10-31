@@ -574,3 +574,48 @@ KeyError: 'Session is disconnected'
 2022-10-31 23:25:01,735 192.168.1.10 - - [31/Oct/2022 23:25:01] "POST /socket.io/?EIO=4&transport=polling&t=OGmNDUt&sid=ctDpNG8TbJPQJZvIAAAA HTTP/1.1" 200 -
 2022-10-31 23:25:08,824 192.168.1.91 - - [31/Oct/2022 23:25:08] "GET /socket.io/?EIO=4&transport=polling&t=OGmN930&sid=d6kA_HqqkgsslZYbAAAG HTTP/1.1" 200 -
 2022-10-31 23:25:09,015 172.28.0.1 - - [31/Oct/2022 23:25:09] "POST /socket.io/?EIO=4&transport=polling&t=OGmNFDQ&sid=d6kA_HqqkgsslZYbAAAG HTTP/1.1" 200 -
+2022-10-31 23:25:16,076 172.28.0.1 - - [31/Oct/2022 23:25:16] "[31m[1mPOST /socket.io/?EIO=4&transport=polling&t=OGmNGxH&sid=AW7EsjJupE0NDwbnAAAM HTTP/1.1[0m" 400 -
+2022-10-31 23:25:17,167 172.28.0.1 - - [31/Oct/2022 23:25:17] "GET /socket.io/?EIO=4&transport=polling&t=OGmNHE6 HTTP/1.1" 200 -
+2022-10-31 23:25:17,211 connected called
+2022-10-31 23:25:17,213 172.28.0.1 - - [31/Oct/2022 23:25:17] "POST /socket.io/?EIO=4&transport=polling&t=OGmNHFi&sid=5XfCYRXhzFY9CbuQAAAQ HTTP/1.1" 200 -
+2022-10-31 23:25:17,213 172.28.0.1 - - [31/Oct/2022 23:25:17] "GET /socket.io/?EIO=4&transport=polling&t=OGmNHFk&sid=5XfCYRXhzFY9CbuQAAAQ HTTP/1.1" 200 -
+2022-10-31 23:25:19,287 192.168.1.221 - - [31/Oct/2022 23:25:19] "[35m[1mPOST /socket.io/?EIO=4&transport=polling&t=OGmNHkZ&sid=A9x-bIaKseUJtOLYAAAI HTTP/1.1[0m" 500 -
+2022-10-31 23:25:19,290 Error on request:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/werkzeug/serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.11/site-packages/werkzeug/serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask_socketio/__init__.py", line 43, in __call__
+    return super(_SocketIOMiddleware, self).__call__(environ,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/engineio/middleware.py", line 63, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/socketio/server.py", line 605, in handle_request
+    return self.eio.handle_request(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/engineio/server.py", line 429, in handle_request
+    socket = self._get_socket(sid)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/engineio/server.py", line 638, in _get_socket
+    raise KeyError('Session is disconnected')
+KeyError: 'Session is disconnected'
+2022-10-31 23:25:20,413 172.28.0.1 - - [31/Oct/2022 23:25:20] "GET /socket.io/?EIO=4&transport=polling&t=OGmNI1D HTTP/1.1" 200 -
+2022-10-31 23:25:20,514 connected called
+2022-10-31 23:25:20,515 172.28.0.1 - - [31/Oct/2022 23:25:20] "POST /socket.io/?EIO=4&transport=polling&t=OGmNI2R&sid=S1ljjoNvzcHYe_KlAAAS HTTP/1.1" 200 -
+2022-10-31 23:25:20,516 172.28.0.1 - - [31/Oct/2022 23:25:20] "GET /socket.io/?EIO=4&transport=polling&t=OGmNI2T&sid=S1ljjoNvzcHYe_KlAAAS HTTP/1.1" 200 -
+2022-10-31 23:25:26,735 192.168.1.10 - - [31/Oct/2022 23:25:26] "GET /socket.io/?EIO=4&transport=polling&t=OGmNDUv&sid=ctDpNG8TbJPQJZvIAAAA HTTP/1.1" 200 -
+2022-10-31 23:25:26,771 192.168.1.10 - - [31/Oct/2022 23:25:26] "POST /socket.io/?EIO=4&transport=polling&t=OGmNJc6&sid=ctDpNG8TbJPQJZvIAAAA HTTP/1.1" 200 -
+2022-10-31 23:25:34,015 172.28.0.1 - - [31/Oct/2022 23:25:34] "GET /socket.io/?EIO=4&transport=polling&t=OGmNFDR&sid=d6kA_HqqkgsslZYbAAAG HTTP/1.1" 200 -
+2022-10-31 23:25:34,185 172.28.0.1 - - [31/Oct/2022 23:25:34] "POST /socket.io/?EIO=4&transport=polling&t=OGmNLM_&sid=d6kA_HqqkgsslZYbAAAG HTTP/1.1" 200 -
+2022-10-31 23:25:42,167 172.28.0.1 - - [31/Oct/2022 23:25:42] "GET /socket.io/?EIO=4&transport=polling&t=OGmNHGw&sid=5XfCYRXhzFY9CbuQAAAQ HTTP/1.1" 200 -
+2022-10-31 23:25:42,376 172.28.0.1 - - [31/Oct/2022 23:25:42] "POST /socket.io/?EIO=4&transport=polling&t=OGmNNOr&sid=5XfCYRXhzFY9CbuQAAAQ HTTP/1.1" 200 -
+2022-10-31 23:25:45,413 172.28.0.1 - - [31/Oct/2022 23:25:45] "GET /socket.io/?EIO=4&transport=polling&t=OGmNI41&sid=S1ljjoNvzcHYe_KlAAAS HTTP/1.1" 200 -
+2022-10-31 23:25:45,521 172.28.0.1 - - [31/Oct/2022 23:25:45] "POST /socket.io/?EIO=4&transport=polling&t=OGmNO9I&sid=S1ljjoNvzcHYe_KlAAAS HTTP/1.1" 200 -
+2022-10-31 23:25:51,771 192.168.1.10 - - [31/Oct/2022 23:25:51] "GET /socket.io/?EIO=4&transport=polling&t=OGmNJc8&sid=ctDpNG8TbJPQJZvIAAAA HTTP/1.1" 200 -
+2022-10-31 23:25:51,818 192.168.1.10 - - [31/Oct/2022 23:25:51] "POST /socket.io/?EIO=4&transport=polling&t=OGmNPjI&sid=ctDpNG8TbJPQJZvIAAAA HTTP/1.1" 200 -
