@@ -42,21 +42,36 @@ function init() {
         loggerElement.appendChild(dataElement)
     })
   
-    socket.on('refreshResp', function (payload) {
-      console.log('refresh response from server:')
-      console.log(payload)
-      // var loggerElement = document.getElementById('logger')
-      var dataElement = document.getElementById('refreshVal')
-      dataElement.innerHTML = payload.data
-      // loggerElement.appendChild(dataElement)
+    
+
+}
+
+function initRefresh() {
+  $("#refresh").click(function (e) {
+    var idClicked = e.target.id;
+    console.log(idClicked)
+  
+    refresh()
+  
+  });
+
+  function refresh() {
+    console.log('sending refresh to server:')
+    socket.emit('refresh', {data: 'Refresh sent from client'})
+  }
+
+  socket.on('refreshResp', function (payload) {
+    console.log('refresh response from server:')
+    console.log(payload)
+    // var loggerElement = document.getElementById('logger')
+    var dataElement = document.getElementById('refreshVal')
+    dataElement.innerHTML = payload.data
+    // loggerElement.appendChild(dataElement)
   })
 
 }
 
-function refresh() {
-  console.log('sending refresh to server:')
-  socket.emit('refresh', {data: 'Refresh sent from client'})
-}
+
 
 function openTab(evt, tabName) {
   var i, tabs, tablinks;
@@ -74,15 +89,7 @@ function openTab(evt, tabName) {
 
 
 $(window).on("load", function () {
-
-  $("#refresh").click(function (e) {
-    var idClicked = e.target.id;
-    console.log(idClicked)
-  
-    refresh()
-  
-  });
-  
-  console.log('window loaded')
-    init()
+  // init()
+  initRefresh()
+  console.log('init completed')
 })
