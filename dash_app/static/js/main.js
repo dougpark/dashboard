@@ -71,6 +71,46 @@ function initRefresh() {
 
 }
 
+function initMessage() {
+  $("#showMsg").click(function (e) {
+    var idClicked = e.target.id;
+    console.log(idClicked)
+    showMsg()
+  });
+
+  function showMsg() {
+    console.log('sending showMsg to server:')
+    socket.emit('showmsg', {data: 'showMsg sent from client'})
+  }
+
+  $("#hideMsg").click(function (e) {
+    var idClicked = e.target.id;
+    console.log(idClicked)
+    hideMsg()
+  });
+
+  function hideMsg() {
+    console.log('sending hideMsg to server:')
+    socket.emit('hidemsg', {data: 'hideMsg sent from client'})
+  }
+
+  socket.on('msgStatus', function (payload) {
+    console.log('msgStatus response from server:')
+    console.log(payload)
+    // var loggerElement = document.getElementById('logger')
+    var dataElement = document.getElementById('displayMsg')
+    if (payload.messageStatus == true) {
+      dataElement.innerHTML = payload.message
+    } else {
+      dataElement.innerHTML = ''
+    }
+    // loggerElement.appendChild(dataElement)
+  })
+
+  socket.emit('getrefresh', {data: 'getRefresh sent from client'})
+  socket.emit('getmsg', {data: 'getMsg sent from client'})
+}
+
 
 
 function openTab(evt, tabName) {
@@ -91,5 +131,6 @@ function openTab(evt, tabName) {
 $(window).on("load", function () {
   // init()
   initRefresh()
+  initMessage()
   console.log('init completed')
 })

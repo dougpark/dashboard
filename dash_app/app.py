@@ -8,6 +8,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'justasecretkeythatishouldputhere'
 socketio = SocketIO(app)
 refreshVal = 0
+msgStatus = False
+msg = 'On Air'
 
 # logging configuration
 # debug, info, warning, error, critical
@@ -27,13 +29,53 @@ def api():
     socketio.emit('log', dict(data=str(query)), broadcast=True)
     return jsonify(dict(success=True, message='Received'))
 
+@app.route('/onair')
+def onair():
+    logging.info('onair called')
+    query = dict(request.args)
+    # socketio.emit('log', dict(data=str(query)), broadcast=True)
+    global msgStatus
+    msgStatus = True
+    payload = dict(data='ok', messageStatus=msgStatus,message=msg)
+    socketio.emit('msgStatus', payload, broadcast=True)
+    return render_template('index.html',date=datetime.now())
+
+
 @socketio.on('refresh')
 def refreshFunc(data):
     global refreshVal
     logging.info('refresh called')
     refreshVal = refreshVal + 1
-    payload = dict(data=refreshVal)
+    payload = dict(data=refreshVal, messageStatus=msgStatus, message=msg)
     emit('refreshResp', payload, broadcast=True)
+
+@socketio.on('getrefresh')
+def getrefreshFunc(data):
+    logging.info('getrefresh called')
+    payload = dict(data=refreshVal, messageStatus=msgStatus, message=msg)
+    emit('refreshResp', payload, broadcast=True)
+
+@socketio.on('showmsg')
+def showMsg(data):
+    global msgStatus
+    logging.info('showMsg called')
+    msgStatus = True
+    payload = dict(data='ok', messageStatus=msgStatus,message=msg)
+    emit('msgStatus', payload, broadcast=True)
+
+@socketio.on('hidemsg')
+def hideMsg(data):
+    global msgStatus
+    logging.info('hideMsg called')
+    msgStatus = False
+    payload = dict(data='ok', messageStatus=msgStatus, message=msg)
+    emit('msgStatus', payload, broadcast=True)
+
+@socketio.on('getmsg')
+def getMsg(data):
+    logging.info('getMsg called')
+    payload = dict(data='ok', messageStatus=msgStatus, message=msg)
+    emit('msgStatus', payload, broadcast=True)
 
 @socketio.on('one')
 def one(data):
