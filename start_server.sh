@@ -2,4 +2,5 @@
 echo 'source .venv/bin/activate'
 source .venv/bin/activate
 echo Dashboard server started
-python3 socket_server.py
+cd ./dash_app
+python3 app.py
