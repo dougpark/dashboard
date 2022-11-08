@@ -65,7 +65,7 @@ function initRefresh() {
     console.log(payload)
     // var loggerElement = document.getElementById('logger')
     var dataElement = document.getElementById('refreshVal')
-    dataElement.innerHTML = payload.data
+    // dataElement.innerHTML = payload.data
     // loggerElement.appendChild(dataElement)
   })
 
@@ -101,8 +101,12 @@ function initMessage() {
     var dataElement = document.getElementById('displayMsg')
     if (payload.messageStatus == true) {
       dataElement.innerHTML = payload.message
+      dataElement.classList.add("w3-red")
+      dataElement.classList.remove("w3-green")
     } else {
-      dataElement.innerHTML = ''
+      dataElement.innerHTML = '...'
+      dataElement.classList.add("w3-green")
+      dataElement.classList.remove("w3-red")
     }
     // loggerElement.appendChild(dataElement)
   })
