@@ -3,7 +3,20 @@ body {
  color: white;
  
 }
+html, body {
+    height: 100%;
+    margin: 0;
+  }
 
+.full-height {
+    height: 100%;
+  }
+
+.full-height-80 {
+    height: 80%;
+  }
+  
+  
 /* PurpleAir Colors
 
 000 #66e143  

@@ -20,7 +20,21 @@ logging.info('running socket_server.py')
 
 @app.route('/')
 def index():
-    return render_template('index.html',date=datetime.now())
+    return render_template('index.html',adminPanel='none', date=datetime.now())
+
+@app.route('/admin')
+def admin():
+    return render_template('index.html',adminPanel='block', date=datetime.now())
+
+@app.route('/on')
+def on():
+    showMsg()
+    return jsonify(dict(success=True, message='On'))
+
+@app.route('/off')
+def off():
+    hideMsg()
+    return jsonify(dict(success=True, message='Off'))
 
 @app.route('/api')
 def api():
@@ -55,21 +69,29 @@ def getrefreshFunc(data):
     payload = dict(data=refreshVal, messageStatus=msgStatus, message=msg)
     emit('refreshResp', payload, broadcast=True)
 
-@socketio.on('showmsg')
-def showMsg(data):
+def showMsg():
     global msgStatus
     logging.info('showMsg called')
     msgStatus = True
     payload = dict(data='ok', messageStatus=msgStatus,message=msg)
-    emit('msgStatus', payload, broadcast=True)
+    socketio.emit('msgStatus', payload, broadcast=True)
 
-@socketio.on('hidemsg')
-def hideMsg(data):
+@socketio.on('showmsg')
+def showMsgNow(data):
+    showMsg()
+
+def hideMsg():
     global msgStatus
     logging.info('hideMsg called')
     msgStatus = False
     payload = dict(data='ok', messageStatus=msgStatus, message=msg)
-    emit('msgStatus', payload, broadcast=True)
+    socketio.emit('msgStatus', payload, broadcast=True)
+    return 
+
+@socketio.on('hidemsg')
+def hideMsgNow(data):
+    hideMsg()
+    
 
 @socketio.on('getmsg')
 def getMsg(data):
@@ -99,4 +121,4 @@ def on_connect():
 
 if __name__ == '__main__':
     # allow_unsafe_werkzeug=True - allows flask to run in docker container as production. Not safe.
-    socketio.run(app,allow_unsafe_werkzeug=True,host='0.0.0.0', port=5000)
+    socketio.run(app,allow_unsafe_werkzeug=True,host='0.0.0.0', port=5000, debug=True)

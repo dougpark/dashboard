@@ -7,7 +7,7 @@
       <link rel = "apple-touch-icon" href = "./static/favicon.png" /> 
       <meta name= "apple-mobile-web-app-capable" content="yes" /> 
       <meta name = "apple-mobile-web-app-status-bar-style" content = "black" /> 
-      <meta name= "apple-mobile-web-app-title" content="Dashboard"> 
+      <meta name= "apple-mobile-web-app-title" content="OnAir"> 
       <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no" >
 
       <!-- w3.css -->
@@ -15,78 +15,25 @@
       <!-- Local Styles -->
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}" />
 
-      <title>Dashboard</title>
+      <title>OnAir</title>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"vintegrity = "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin = "anonymous" > </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
       <script src="{{ url_for('static', filename='js/main.js')}}"></script>
     </head>
 
-    <body>
-
-      <div class="w3-container w3-round" style=" margin-left: auto; margin-right: auto; max-width: 50em; padding: 0">
-        <!-- Navigation Bar -->
-        <!-- <div class="w3-round w3-bar w3-blue">
-            <button class="w3-round w3-bar-item w3-button tablink w3-bottombar w3-border-red"
-                onclick="openTab(event,'Socket')">Socket</button>
-            <button class="w3-round w3-bar-item w3-button tablink w3-bottombar w3-border-blue"
-                onclick="openTab(event,'Settings')">Settings</button>
-        </div>
-        <br> -->
-
-      <!-- Socket Tab -->
-      <div id="Socket" class="w3-card-4 w3-dark-grey w3-center w3-round tab">
-        <!-- <div class="w3-container w3-blue w3-center w3-round"> -->
-            <h1 id="displayMsg" class="w3-text-white w3-green w3-center w3-wide">Loading</h1>
-        <!-- </div> -->
-        <div class="w3-container w3-center">
-          <!-- It's {{ date.strftime("%A, %d %B, %Y at %X") }}. -->
-        <!-- <div id="logger"></div> -->
-        <div class="w3-center" style="width:80%; margin-left: auto; margin-right: auto; width: 20em"> 
-                <!-- <h3 id="sensor_label"></h3>
-
-                <h3 id="sensor_result" class="w3-text-black w3-round"></h3>
+    <body class="">
+        
+      <div class="w3-black full-height " style="margin-left: auto; margin-right: auto;  padding: 0"> 
+            <div id="displayMsgC" class="full-height ">
+             <div id="displayMsg" class="w3-display-middle w3-text-white w3-black w3-center" style="font-size: 10vw" >Loading...</div>            
             </div>
-            <div class="w3-section">
-                <button id='refresh' class="w3-button w3-blue w3-round">Refresh</button>
+            <div id="adminPanel" class="w3-display-bottommiddle w3-padding-24" style="display: {{ adminPanel }};">
+                <div class="w3-center w3-padding-16">Time</div>
+                <div class="w3-center w3-padding-16">Remaining</div>
+             <button id='showMsg' class="w3-button w3-grey w3-round">On</button>
+             <button id='hideMsg' class="w3-button w3-grey w3-round">Off</button>
             </div>
-            <div id="refreshVal">
-            </div> --> 
-            <div class="w3-section">
-                <button id='showMsg' class="w3-button w3-blue w3-round">On</button>
-            <!-- </div>
-            <div class="w3-section"> -->
-                <button id='hideMsg' class="w3-button w3-blue w3-round">Off</button>
-            </div>
-            <div id="displayMsg2">
-            </div>
-        </div>
-    </div>
-
-      <!-- Settings Tab -->
-      <div id="Settings" class="w3-card-4 w3-dark-grey w3-round tab" style="display: none;">
-        <div class="w3-container w3-blue w3-center w3-round">
-            <h2>Purple Air</h2>
-        </div>
-        <div class="w3-container">
-            <form class="w3-container">
-                <p>
-                    <label>Current Sensor Id</label>
-                <p id="currentSensorId">CurrentSensorId</p>
-                </p>
-                <p>
-                    <label>NewSensor Id</label>
-                    <input id="saveSensorId" class="w3-input w3-round" type="text">
-                </p>
-            </form>
-            <div class="w3-section w3-center">
-                <button id="saveSensorBtn" class="w3-button w3-blue w3-round">Save</button>
-            </div>
-        </div>
-      </div>
-
-
-
-       
+        </div>         
     </body>
 
 </html>

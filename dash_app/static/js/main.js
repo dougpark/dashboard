@@ -99,14 +99,26 @@ function initMessage() {
     console.log(payload)
     // var loggerElement = document.getElementById('logger')
     var dataElement = document.getElementById('displayMsg')
+    var dataElementC = document.getElementById('displayMsgC')
+
+    if (payload.adminPanel == true) {
+      document.getElementById("adminPanel").style.display = "block";
+    }
+
     if (payload.messageStatus == true) {
       dataElement.innerHTML = payload.message
       dataElement.classList.add("w3-red")
       dataElement.classList.remove("w3-green")
+      dataElement.classList.remove("w3-black")
+      dataElementC.classList.add("w3-red")
+      dataElementC.classList.remove("w3-green")
     } else {
-      dataElement.innerHTML = '...'
+      dataElement.innerHTML = 'Ready'
       dataElement.classList.add("w3-green")
       dataElement.classList.remove("w3-red")
+      dataElement.classList.remove("w3-black")
+      dataElementC.classList.add("w3-green")
+      dataElementC.classList.remove("w3-red")
     }
     // loggerElement.appendChild(dataElement)
   })
