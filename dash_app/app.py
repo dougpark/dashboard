@@ -28,8 +28,10 @@ def admin():
 
 @app.route('/on')
 def on():
-    showMsg()
-    return jsonify(dict(success=True, message='On'))
+    minutes = request.args.get('minutes', default='120')
+    showMsg(minutes)
+    
+    return jsonify(dict(success=True, message='On', minutes=minutes))
 
 @app.route('/off')
 def off():
@@ -69,11 +71,11 @@ def getrefreshFunc(data):
     payload = dict(data=refreshVal, messageStatus=msgStatus, message=msg)
     emit('refreshResp', payload, broadcast=True)
 
-def showMsg():
+def showMsg(minutes='120'):
     global msgStatus
     logging.info('showMsg called')
     msgStatus = True
-    payload = dict(data='ok', messageStatus=msgStatus,message=msg)
+    payload = dict(data='ok', messageStatus=msgStatus,message=msg,minutes=minutes)
     socketio.emit('msgStatus', payload, broadcast=True)
 
 @socketio.on('showmsg')

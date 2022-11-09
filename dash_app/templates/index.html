@@ -3,12 +3,17 @@
     <head>
       <!-- Required meta tags -->
       <meta charset = "utf-8"> 
-      <link rel="icon" href="./static/favicon.png" /> 
-      <link rel = "apple-touch-icon" href = "./static/favicon.png" /> 
-      <meta name= "apple-mobile-web-app-capable" content="yes" /> 
+      <meta name = "apple-mobile-web-app-capable" content = "yes" /> 
       <meta name = "apple-mobile-web-app-status-bar-style" content = "black" /> 
-      <meta name= "apple-mobile-web-app-title" content="OnAir"> 
+      <meta name = "apple-mobile-web-app-title" content = "OnAir"> 
       <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+      <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+      <link rel="manifest" href="static/site.webmanifest">
+
+
 
       <!-- w3.css -->
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -30,8 +35,8 @@
             <div id="adminPanel" class="w3-display-bottommiddle w3-padding-24" style="display: {{ adminPanel }};">
                 <div class="w3-center w3-padding-16">Time</div>
                 <div class="w3-center w3-padding-16">Remaining</div>
-             <button id='showMsg' class="w3-button w3-grey w3-round">On</button>
-             <button id='hideMsg' class="w3-button w3-grey w3-round">Off</button>
+             <button id='showMsg' class="w3-button w3-grey w3-round">On Air</button>
+             <button id='hideMsg' class="w3-button w3-grey w3-round">Stop</button>
             </div>
         </div>         
     </body>
