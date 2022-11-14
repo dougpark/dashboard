@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request, jsonify
-from flask_socketio import SocketIO, emit
+import logging
+import time
 # https://flask-socketio.readthedocs.io/en/latest/intro.html
 from datetime import datetime
-import logging
+
+from flask import Flask, jsonify, render_template, request
+from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'justasecretkeythatishouldputhere'
@@ -10,6 +12,8 @@ socketio = SocketIO(app)
 refreshVal = 0
 msgStatus = False
 msg = 'On Air'
+onAir = False
+defaultTimer = 120
 
 # logging configuration
 # debug, info, warning, error, critical
